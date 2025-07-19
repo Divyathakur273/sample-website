@@ -17,7 +17,7 @@ concurrency:
 
 jobs:
   js-syntax-check:
-    name: Check index.js Syntax
+    name: Check script.js Syntax
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -29,7 +29,7 @@ jobs:
           node-version: '20'
 
       - name: Check JavaScript syntax
-        run: node --check index.js
+        run: node --check script.js
 
   deploy:
     name: Deploy to GitHub Pages
